@@ -1,24 +1,15 @@
-import { createRoutesFromElements, createBrowserRouter,  Route, RouterProvider } from 'react-router-dom'
-import './App.css'
+import { useState } from 'react'
 import { Home } from './components/Home'
-import { Admin } from './components/Admin'
-import { Dashboard } from './components/Dashboard'
-
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path="/">
-      <Route index element={<Home />} />
-      <Route path='admin' element={<Admin/>}/>
-      <Route path='dashboard' element={<Dashboard/>}/> 
-    </Route>
-  )
-)
+import {TrackNumber} from './components/TrackNumber'
+import './styles/App.css'
 
 function App() {
+  const [dashboard, setDashboard] = useState(false)
+  const [trackNumber, setTrackNumber] = useState(false)
   
   return (
     <>
-    <RouterProvider router={router}/>
+    {!dashboard ? <Home setDashboard={setDashboard} setTrackNumber={setTrackNumber}/>: <TrackNumber trackNumber={trackNumber}/>}
     </>
   )
 }

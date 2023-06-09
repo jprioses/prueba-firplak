@@ -1,0 +1,39 @@
+.home__container{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+
+.content__home {
+    justify-content: center;
+    align-items: center;
+}
+
+.form__home {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.form__home input{
+    height: 30px;
+    width: 80%;
+    border-radius: 20px;
+    border: 1px solid black;
+    padding: 0 10px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.form__home button {
+    height: 40px;
+    width: 200px;
+    margin: 20px auto;
+    border-radius: 10px;
+    background-color: lavender;
+    border: 1px solid black;
+    font-weight: bold;
+    color: black;
+}

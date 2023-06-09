@@ -1,0 +1,131 @@
+p {
+    display: inline;
+    margin: 0 5px;
+}
+
+.track__container{
+    width: 100%;
+    min-width: 320px;
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+    
+}
+
+.track__info{
+    margin: 20px auto;
+    width: 90%;
+    background-color:lavender;
+    padding: 20px;
+    border-bottom: 1px solid black;
+    border-radius: 20px;
+}
+
+.track__info div{
+    margin: 5px;
+    font-size: 1.2rem;
+}
+
+.track__info div :nth-child(1){
+   font-weight: bold;
+}
+
+.sendings__cards {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid black;
+    border-radius: 20px;
+    min-height: 250px;
+}
+
+.sending__card{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    padding: 10px ;
+    
+}
+
+.sendings__state {
+    margin-top: 20px;
+    font-size: 0.8rem;
+}
+
+.state {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    font-weight: bold;
+    justify-content: center;
+    
+}
+
+.state div{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%; 
+}
+
+.state .gray_state{
+    background-color: gray;
+}
+
+.state .blue_state{
+    background-color: blue;
+}
+
+.state .green_state{
+    background-color: green;
+}
+
+.state .red_state{
+    background-color: red;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.buttons * {
+    height: 40px;
+    width: 90px;
+    margin: 10px 10px;
+    border-radius: 10px;
+    background-color: lavender;
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+.lines__cards {
+    width: 40%;
+    padding: 10px;
+    align-self: center;
+}
+
+.lines__card{
+    
+    margin: 10px 0;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: lavender;
+}
+
+.lines__card div {
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.sending__card div :nth-child(1), .lines__card div :nth-child(1) {
+    font-weight: bold;
+}
+
+@media (min-width:450px) {
+    .lines__card div {
+        margin: 0 auto;
+    }
+}
