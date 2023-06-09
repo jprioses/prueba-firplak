@@ -1,14 +1,12 @@
-
-import '../styles/trackNumber.css'
 import { useState, useEffect } from "react"
 import { client } from "../client.js"
 import { Dashboard } from './Dashboard'
+import '../styles/trackNumber.css'
 
 function TrackNumber({trackNumber}){
 
   const [trackData, setTrackData] = useState(null)
   
-
   useEffect(() => {
     trackNumber &&
     client.fetch(
@@ -34,12 +32,14 @@ function TrackNumber({trackNumber}){
   },[trackNumber])
 
   
-
-  
   return (
     <div className="track__container" >
-        {trackData && trackData.length > 0  && <Dashboard trackData={trackData} trackNumber={trackNumber}/>}
-        {(!trackData || trackData.length == 0)  && <h2>Guia no encontrada</h2>}
+
+        {trackData && trackData.length > 0  
+        && <Dashboard trackData={trackData} trackNumber={trackNumber}/>}
+
+        {(!trackData || trackData.length == 0) 
+         && <h2>Guia no encontrada</h2>}
    </div>
   )
 }

@@ -3,6 +3,7 @@ import { client } from "../client"
 import ReactDOM from 'react-dom'
 
 const UpdatePOD = ({setOpenPOD, sendingEvent}) => {
+    
     const [updateState, setUpdateState] = useState(false)
     const [id, setId] = useState(null)
     const [dataObject, setDataObject] = useState({})

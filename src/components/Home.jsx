@@ -1,9 +1,7 @@
-import {useRef, useState, useEffect } from "react"
-
+import {useRef } from "react"
 
 const Home = ({setTrackNumber, setDashboard}) => {
 
-  
   const trackNumberRef = useRef(null)
 
   function trackClick(){
@@ -16,7 +14,6 @@ const Home = ({setTrackNumber, setDashboard}) => {
       setTrackNumber(trackNumberRef.current.value)
       setDashboard(true)
     }
-    
   }
 
   return (
@@ -33,7 +30,6 @@ const Home = ({setTrackNumber, setDashboard}) => {
                 placeholder='Introduzca un numero de guía' 
                 required />
         <button type="submit">RASTREAR GUÍA</button>
-        {/* <button onClick={() => trackClick()}>IR AL DASHBOARD</button> */}
       </form>
         
      

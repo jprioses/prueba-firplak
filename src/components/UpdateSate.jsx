@@ -2,10 +2,10 @@ import ReactDOM from 'react-dom'
 import '../styles/updateSate.css'
 import { useEffect, useState } from 'react'
 import { client } from '../client'
+import emailjs from 'emailjs-com'
 
 const UpdateSate = ({setOpenState, sendingEvent}) => {
 
-    
     const [updateState, setUpdateState] = useState(false)
     const [id, setId] = useState(null)
     const [dataObject, setDataObject] = useState({})
@@ -47,9 +47,25 @@ const UpdateSate = ({setOpenState, sendingEvent}) => {
                             }
                         }
                     )) 
-        && setOpenState(false)
+        && sendEmail() && setOpenState(false) 
     }, [updateState])
 
+
+    const sendEmail = () => {
+    
+        if (dataObject['state'] === 'Entregado') {
+
+            const emailData = {number: dataObject['sending'],
+                                ref: 'remisión',
+                                date: dataObject['date'],
+                                comments: dataObject['comments']}
+           
+            emailjs.send('service_sjedtr7', 'template_60y7gip', emailData, 'nVIG2ErEw4qrAVwPz')
+        }
+
+        return true
+
+      };
 
     return ReactDOM.createPortal(
         <div className="modal__container">
@@ -81,7 +97,6 @@ const UpdateSate = ({setOpenState, sendingEvent}) => {
                     <button type='button' onClick={()=>setOpenState(false)}>Cerrar</button>
                 </div>
                
-
             </form>
         </div>,
         

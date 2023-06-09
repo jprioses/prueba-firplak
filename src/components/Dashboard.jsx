@@ -83,15 +83,9 @@ const Dashboard = ({trackNumber, trackData }) => {
                   </div>
                 </div>
 
-
-            
-
-
             ))}
 
             </div>
-
-           
 
           </div>
 

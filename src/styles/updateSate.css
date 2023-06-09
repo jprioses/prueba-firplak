@@ -52,7 +52,9 @@
     padding: 0 10px;
 }
 
-
+.modal__content  div textarea{
+    padding-top: 10px;
+}
 
 .modal__content  button{
     height: 40px;

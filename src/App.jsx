@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Home } from './components/Home'
 import {TrackNumber} from './components/TrackNumber'
-import './styles/App.css'
+
 
 function App() {
   const [dashboard, setDashboard] = useState(false)
@@ -9,7 +9,9 @@ function App() {
   
   return (
     <>
-    {!dashboard ? <Home setDashboard={setDashboard} setTrackNumber={setTrackNumber}/>: <TrackNumber trackNumber={trackNumber}/>}
+    {!dashboard ? 
+    <Home setDashboard={setDashboard} setTrackNumber={setTrackNumber}/>:
+     <TrackNumber trackNumber={trackNumber}/>}
     </>
   )
 }
